@@ -1,30 +1,30 @@
 /* ===== CSS VARIABLES FOR THEME SYSTEM ===== */
 :root {
-  /* Dark Theme (Default) */
-  --bg-primary: linear-gradient(135deg, #0a0a0a 0%, #0f1f0f 50%, #0a0a0a 100%);
-  --bg-secondary: #1a1a1a;
-  --bg-tertiary: #2a2a2a;
-  --text-primary: #f8f9fa;          /* Softer off-white instead of pure white */
-  --text-secondary: #b8b8b8;        /* Slightly brighter gray for better readability */
-  --brand-color: #00ff00;           /* Keep pure green unchanged */
-  --brand-hover: #00cc00;           /* Keep green hover unchanged */
-  --brand-on-green: #000000;        /* Black text for green backgrounds */
-  --border-color: #333333;
-  --shadow: rgba(0, 255, 0, 0.1);
+  /* Dark Theme (Default) - Deep dark with subtle cyan/green accent */
+  --bg-primary: #0a0f14;
+  --bg-secondary: #0d1318;
+  --bg-tertiary: #141c24;
+  --text-primary: #e8eef4;          /* Soft off-white for readability */
+  --text-secondary: #8a9aaa;        /* Muted gray-blue for secondary text */
+  --brand-color: #00ff88;           /* Vibrant cyan-green accent */
+  --brand-hover: #00cc6a;           /* Slightly darker on hover */
+  --brand-on-green: #0a0f14;        /* Dark text for green backgrounds */
+  --border-color: #1e2a36;
+  --shadow: rgba(0, 255, 136, 0.15);
 }
 
 /* Light Theme */
 [data-theme="light"] {
-  --bg-primary: linear-gradient(135deg, #ffffff 0%, #f0fff0 50%, #ffffff 100%);
-  --bg-secondary: #f8f9fa;
-  --bg-tertiary: #e9ecef;
-  --text-primary: #1a1a1a;          /* Darker text instead of pure black for softer contrast */
-  --text-secondary: #6c757d;
-  --brand-color: #00b300;           /* Keep green unchanged */
-  --brand-hover: #009900;           /* Keep green hover unchanged */
+  --bg-primary: #f0f4f8;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #e4ecf4;
+  --text-primary: #0a1628;          /* Dark navy text */
+  --text-secondary: #4a5f7a;
+  --brand-color: #00b87a;           /* Balanced green accent */
+  --brand-hover: #009962;           /* Darker on hover */
   --brand-on-green: #ffffff;        /* White text for green backgrounds in light theme */
-  --border-color: #dee2e6;
-  --shadow: rgba(0, 179, 0, 0.1);
+  --border-color: #d0dce8;
+  --shadow: rgba(0, 184, 122, 0.12);
 }
 
 /* ===== RESET AND BASE STYLES ===== */
@@ -86,6 +86,27 @@ html {
 
 [data-theme="light"] html {
   scrollbar-color: var(--brand-color) var(--bg-secondary);
+}
+
+/* ===== SECTION-WISE SMOOTH SCROLLING ===== */
+html {
+  scroll-snap-type: y proximity;
+}
+
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+}
+
+/* Ensure sections fill viewport for better snap behavior */
+.hero-section,
+.about-section,
+.skills-section,
+.education-section,
+.projects-section,
+.contact-section {
+  min-height: 100vh;
+  scroll-snap-align: start;
 }
 
 /* Custom text selection colors */

@@ -12,9 +12,17 @@
     <meta property="og:image" content="images/img_saksham00.jpg">
     <meta property="og:url" content="https://sakshamsharma.pro/">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#00b300">
+    <meta name="theme-color" content="#00ff88">
     <link rel="canonical" href="https://sakshamsharma.pro/">
-    <link rel="icon" type="image/png" href="images/S_logo.png">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/S_logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/S_logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/loki512.jpg">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="msapplication-TileColor" content="#0a0f14">
+    <meta name="msapplication-TileImage" content="images/loki512.jpg">
+    
     <title>Saksham Sharma | Cybersecurity Professional</title>
     
     <!-- Structured Data for Google Knowledge Panel -->
@@ -83,7 +91,8 @@
             <div class="loading-text">
                 <span class="letter">L</span><span class="letter">o</span><span class="letter">a</span><span class="letter">d</span><span class="letter">i</span><span class="letter">n</span><span class="letter">g</span>
                 <span class="space"></span>
-                <span class="letter">y</span><span class="letter">o</span><span class="letter">u</span><span class="letter">r</span>
+                <span class="letter">m</span>
+                <span class="letter">y</span>
                 <span class="space"></span>
                 <span class="letter">a</span><span class="letter">w</span><span class="letter">e</span><span class="letter">s</span><span class="letter">o</span><span class="letter">m</span><span class="letter">e</span>
                 <span class="space"></span>
@@ -992,5 +1001,20 @@
     <script src="js/animations.js"></script>
     <script src="js/hero.js"></script>
     <script src="js/contact.js"></script>
+    
+    <!-- Service Worker Registration for PWA -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('NeoLoki SW registered:', registration.scope);
+                    })
+                    .catch(error => {
+                        console.log('NeoLoki SW registration failed:', error);
+                    });
+            });
+        }
+    </script>
 </body>
 </html>

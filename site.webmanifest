@@ -1,1 +1,26 @@
-{"name":"","short_name":"","icons":[{"src":"/android-chrome-192x192.png","sizes":"192x192","type":"image/png"},{"src":"/android-chrome-512x512.png","sizes":"512x512","type":"image/png"}],"theme_color":"#ffffff","background_color":"#ffffff","display":"standalone"}
+{
+  "name": "NeoLoki - Saksham Sharma Portfolio",
+  "short_name": "NeoLoki",
+  "description": "Saksham Sharma is a Certified Ethical Hacker, Penetration Tester, IT Auditor, and SOC Analyst from Nepal. Specializing in cybersecurity, vulnerability assessment, network security, and security operations.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#00ff88",
+  "background_color": "#0a0f14",
+  "categories": ["portfolio", "cybersecurity", "professional"],
+  "icons": [
+    {
+      "src": "images/S_logo.png",
+      "sizes": "64x64",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "images/loki512.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}
