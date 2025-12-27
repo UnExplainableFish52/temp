@@ -41,7 +41,7 @@ function initContactForm() {
                 from_name: formData.get('name'),
                 from_email: formData.get('email'),
                 message: formData.get('message'),
-                to_email: 'aashishadhikari220@gmail.com'
+                to_email: 'sharma@saksham.bio'
             };
             
             // Auto-reply email to sender

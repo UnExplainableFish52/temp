@@ -136,11 +136,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // ===== TYPING ANIMATION =====
     const roles = [
-        'Web Developer',
-        'AI Enthusiast', 
-        'Python Developer',
-        'UI/UX Designer',
-        'Graphic Designer'
+        'Certified Ethical Hacker',
+        'Penetration Tester', 
+        'SOC Analyst',
+        'IT Auditor',
+        'Security Professional'
     ];
     
     let currentRole = 0;
